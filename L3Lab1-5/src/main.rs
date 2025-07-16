@@ -1,5 +1,5 @@
 fn main() {
-    //part 1
+    //PART 1
     let year = 2025; 
     let mut month = 7;
 
@@ -12,7 +12,7 @@ fn main() {
     year = 2026;
     println!("New year: {}", year);
 
-    //part 2
+    //PART 2
     let mut price = 99.99; 
 
     //assign 100 to price 
@@ -22,7 +22,7 @@ fn main() {
 
     println!("{discount_applied}");
 
-    //part 3
+    //PART 3
     let available = true;
     let mut in_stock = false;
     let rating = 4.5;
@@ -38,22 +38,24 @@ fn main() {
     println!("Available or in stock: {}", available || in_stock);
     println!("Rating is less than 3 or more than 4: {}", rating < 3.0 || rating > 4.0);
 
-    //part 4
+    //PART 4
     let mut score = 80;
-    score += 10;
-    let score = score > 85;
-    let score = if score {"Passed"} else {"Failed"};
+    score += 10; //adds 10 to le score
+    let score = score > 85; //shadows score and changes its type and mutability
+    let score = if score {"Passed"} else {"Failed"}; 
     println!("score: {}", score); 
 
-    //part 5
+    //PART 5
     let a = 10;
+    let mut b = 5;
     {
-        let b = a + 5; println!("{}", b);
-        let mut a = 10.0; //changes a into float in the inner scope
+        b = a + 5; println!("{}", b);
+        let mut a = 10.0; //changes 'a' into float in the inner scope
         a += 0.5;
         println!("{}", a);
      }
 
-    let b = a + 5; //Since we declared b in the 
+    //let b = a + 5; //Since we declared b in the scope, we have to shadow the value to print; here a is back to its original value
     println!("b is now: {}", b);
+    println!("a is now: {}", a);
 }

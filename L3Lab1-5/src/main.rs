@@ -6,17 +6,17 @@ fn main() {
     //Reassigned month
     month = 12; 
     
-    println!("Year: {}, Month:{}", year, month);
+    println!("Year: {}, Month:{}", year, month); 
 
-    let mut year = year;
+    let mut year = year; //change mutability 
     year = 2026;
     println!("New year: {}", year);
 
     //part 2
-    let mut price = 99.99;
+    let mut price = 99.99; 
 
     //assign 100 to price 
-    price = 100.00; //we need to state .00 at the end as the price var's type is a floating point; price = 100; is wrong
+    price = 100.00; //we need to state .00 at the end as the price var's type is a floating point// price = 100; is wrong
 
     let discount_applied:bool = price < 100.00;
 

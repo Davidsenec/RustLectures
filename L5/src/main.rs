@@ -10,19 +10,29 @@ fn pascal(x: u32, y: u32) -> u32{
 
 
 fn main() {
-    let mut input = String::new();
-    print!("Enter your number: ");
-    io::stdout().flush().unwrap();
-    io::stdin().read_line(&mut input).expect("Failed to read input");
-    let n:u32 = input.trim().parse().unwrap();
+    loop {
+        let mut input = String::new();
+        print!("Enter your number between 1-9: ");
+        io::stdout().flush().unwrap();
+        io::stdin().read_line(&mut input).expect("Failed to read input");
+        let n:u32 = input.trim().parse().unwrap();
 
-    for i in 0..n {
-        for _ in 0..(n - i - 1) {
-            print!(" ");
+        if n > 9 {
+            print!("Your number was too high");
+            break;
         }
-        for j in 0..=i {
-            print!("{:2}", pascal(i, j));
+
+        for i in 0..n {
+            for _ in 0..(n - i) {
+                print!("  ");
+            }
+            for j in 0..=i {
+                print!("{:4}", pascal(i, j));
+            }
+            println!()
+            }
+            break;
         }
-        println!()
-    }
+    
+    
 }

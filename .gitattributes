@@ -1,0 +1,8 @@
+// Force Rust as the primary language
+*.rs linguist-language=Rust
+
+# Ignore build artifacts from language stats
+/target/* linguist-detectable=false
+
+# Don’t let Makefile skew repo language percentage
+Makefile linguist-detectable=false

@@ -59,6 +59,7 @@ fn main() {
                 i += 1;
             }
         }
+
         "3" => {
             println!("Enter ID of desired product of removal: ");
             let mut id = String::new();
@@ -79,9 +80,11 @@ fn main() {
                 i += 1;
             }
         }
+
         "4" => {
             println!("{:?}", warehouse);
         }
+        
         "5" => {
             println!("Exiting Program");
             break;

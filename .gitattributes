@@ -1,4 +1,4 @@
-// Force Rust as the primary language
+# Force Rust as the primary language
 *.rs linguist-language=Rust
 
 # Ignore build artifacts from language stats
